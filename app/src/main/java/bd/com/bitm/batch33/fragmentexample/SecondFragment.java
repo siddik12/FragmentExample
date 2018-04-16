@@ -42,9 +42,6 @@ public class SecondFragment extends Fragment {
             Toast.makeText(getActivity(),msg,Toast.LENGTH_LONG).show();
         }
 
-
-
-
         Button buttonSecondFragment = view.findViewById(R.id.buttonSecondFragment);
         buttonSecondFragment.setOnClickListener(new View.OnClickListener() {
             @Override
