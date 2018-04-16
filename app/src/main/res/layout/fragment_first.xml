@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+
+    <Button
+        android:id="@+id/buttonFirstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="First Fragment Show" />
+
+    <Button
+        android:id="@+id/buttonShowSecondFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Second Fragment" />
+</FrameLayout>
