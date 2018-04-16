@@ -32,8 +32,16 @@ public class FirstFragment extends Fragment {
         buttonShowSecondFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.load(new SecondFragment());
+                FragmentLoader fragmentLoader = (FragmentLoader) getActivity();
+                SecondFragment secondFragment = SecondFragment.getInstance();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("msg","Hello second fragment...");
+                secondFragment.setArguments(bundle);
+
+                fragmentLoader.load(secondFragment);
+
+
             }
         });
 
