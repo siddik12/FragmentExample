@@ -33,7 +33,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-                mainActivity.loadFragment(new SecondFragment());
+                mainActivity.load(new SecondFragment());
             }
         });
 

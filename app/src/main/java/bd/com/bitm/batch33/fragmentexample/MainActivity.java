@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentLoader{
 
     Button buttonFragment1,buttonFragment2;
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                FirstFragment firstFragment = new FirstFragment();
-                loadFragment(firstFragment);
+                load(firstFragment);
             }
         });
 
@@ -33,13 +33,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SecondFragment secondFragment = new SecondFragment();
-                loadFragment(secondFragment);
+                load(secondFragment);
             }
         });
 
     }
 
-    public void loadFragment(Fragment fragment){
+   /* public void loadFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentFrame,fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }*/
+
+    @Override
+    public void load(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentFrame,fragment);
